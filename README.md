@@ -1,6 +1,6 @@
 # Flask Mail Sender
 
-<h1>Whats is this application?<h1>
+<h1>Whats is this application?</h1>
 <p>This app is a simple project that show how to send form information to a
 email. With SMTP, Python and Flask.</p>
 <h2>Requirements</h1>
