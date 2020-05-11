@@ -4,9 +4,10 @@
 <p>This app is a simple project that show how to send form information to a
 email. With SMTP, Python and Flask.</p>
 <h2>Requirements</h1>
-<p>To use this application, will be necessary to install <a>Python 3</a> in your
-machine, and have some libs and Flask framework install. To install libs and
-frameworks, you'ill need to open your command prompt and execute commands.
+<p>To use this application, will be necessary to install 
+<a href="https://www.python.org/">Python 3</a> in your machine, and have 
+some libs and Flask framework install. To install 
+libs and frameworks, you'ill need to open your command prompt and execute commands.
 This is the list of libs and frameworks to install:</p>
 <ul>
    <li>Flask: Use command "pip install flask"</li>
