@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta lang="en">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',
+  filename="css/style.css")}}">
+</head>
+<body>
+{% block content %}
+<form action="" method="POST">
+  {{ form.csrf_token }}
+  {{ form.senderMail(class = "SenderMail", placeholder = "Your email")}}<br>
+  {{ form.senderPasswd(class = "SenderPasswd", placeholder = "Your password")}}
+  <br>
+  {{ form.targetMail(class = "TargetMail", placeholder = "To")}}<br>
+  {{ form.subject }}<br>
+  {{ form.text }}<br>
+  <input type="submit" value="Send">
+</form>
+{% endblock %}
+{% if status != 0 %}
+   {% if status == 1 %}
+   <script>
+      alert("Message sent successfully!")
+   </script>
+   {% endif %}
+   {% if status == -1 %}
+      <script>
+         alert("Your email dont exists! Try again")
+      </script>
+      <style>
+         .SenderMail{outline: 1px solid red;}
+      </style>
+    {% endif %}
+    {% if status == -2 %}
+       <script>
+           alert("Target email dont exists or invalid password!Try again!")
+       </script>
+       <style>
+          .SenderPasswd, .TargetMail{outline: 1px solid red;}
+       </style>
+    {% endif %}
+{% endif %}
+</body>
+</html>
